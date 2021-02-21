@@ -66,4 +66,4 @@ print(explore_str2.translate(tbl))
 
 print(explore_str2.upper()) 
 print(explore_str2.zfill(13)) 
-print('The End!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+print('The End!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
