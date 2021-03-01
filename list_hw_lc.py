@@ -29,3 +29,4 @@ print('res_float_list: ', res_float_list)
 
 res_str_list = [str(i) for i in str_list]
 print('res_str_list: ', res_str_list)
+# код протестировал
