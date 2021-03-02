@@ -4,7 +4,7 @@ my_numerator = 4+5j
 my_denominator = 3423.55
 try:
     result = my_numerator/my_denominator
-    print('Результат деления чисел:', result)
+    print('Результат деления чисел: ', result)
 except TypeError:
     print('Операция деления со строками невозможна')
 except ValueError:
