@@ -1,4 +1,3 @@
-
 # Задача 1. Дано список словарей, создать список кортежей [('red', 'high'), ('yellow', 'low')]
 
 list1 = [{'color': 'red', 'value': 'high'}, {'color': 'yellow', 'value': 'low'}]
