@@ -1,8 +1,9 @@
+
 # Задача 1. Дано список словарей, создать список кортежей [('red', 'high'), ('yellow', 'low')]
 
 list1 = [{'color': 'red', 'value': 'high'}, {'color': 'yellow', 'value': 'low'}]
 
-list_c1 = [(list1[i]['color'], list1[i]['value']) for i in range(len(list1))]
+list_c1 = [tuple(list1[i].values()) for i in range(len(list1))]
 print('Задача 1: ', list_c1)
 
 # Задача 2. Преобразовать словарь в список кортежей [('a', 1), ('b', 2), ('c', 3)]
@@ -17,7 +18,7 @@ print('Задача 2: ', list2)
 list_a = [1, 2, 3, 4]
 list_b = [5, 6, 7, 8]
 
-list_c2 = [(list_a[i], list_b[i]) for i in range(len(list_a))]
+list_c2 = list(zip(list_a, list_b))
 print('Задача 3: ', list_c2)
 
 # Задача 4. Создать кортеж занчений для первих трьох єлементов словоря
