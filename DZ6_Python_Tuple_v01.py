@@ -3,7 +3,7 @@
 
 list1 = [{'color': 'red', 'value': 'high'}, {'color': 'yellow', 'value': 'low'}]
 
-list_c1 = [tuple(list1[i].values()) for i in range(len(list1))]
+list_c1 = [tuple(d.values()) for d in list1]
 print('Задача 1: ', list_c1)
 
 # Задача 2. Преобразовать словарь в список кортежей [('a', 1), ('b', 2), ('c', 3)]
