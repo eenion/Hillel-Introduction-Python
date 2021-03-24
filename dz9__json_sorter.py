@@ -7,31 +7,29 @@ def json_transform():
     '''
     with open('HW.json', 'r') as json_data:
         dicc_d =  json.load(json_data)
-        listindict = dicc_d['employee']
-
-    listindict = dicc_d['employee']
+        
+    employee = dicc_d['employee']
     my_dict4 = {}
-    for i in range(len(listindict)):
-        name = listindict[i]['firstName']
-        familia = listindict[i]['lastName']
-        fio = name + ' ' + familia
+    for person in employee:
+        first_name = person.get('firstName')
+        last_name = person.get('lastName')
+        fio = f"{first_name} + ' ' + {last_name}"
         ints = []
         strings = []
         floats = []
         nons = []
         bools = []
-        my_dict = listindict[i]
-        for key in my_dict:
-            if type(my_dict[key]) == int:
-                ints.append(my_dict[key])
-            elif type(my_dict[key]) == str:
-                strings.append(my_dict[key])
-            elif type(my_dict[key]) == float:
-                floats.append(my_dict[key])
-            elif type(my_dict[key]) == None:
-                nons.append(my_dict[key])
-            elif type(my_dict[key]) == bool:
-                bools.append(my_dict[key])
+        for pers_key, pers_value in person.items():
+            if type(pers_value) == int:
+                ints.append(pers_value)
+            elif type(pers_value) == str:
+                strings.append(pers_value)
+            elif type(pers_value) == float:
+                floats.append(pers_value)
+            elif type(pers_value) == None:
+                nons.append(pers_value)
+            elif type(pers_value) == bool:
+                bools.append(pers_value)
         
         my_dict2 = {'int':ints, 'string':strings, 'float':floats, 'None':nons, 'bool':bools}
         my_dict3 = {fio : my_dict2}
