@@ -20,6 +20,7 @@ def zip_some_lists(list1, list2, list3):
         
     return ziped_list
 
+
 def sum_tuples_in_list(some_list):
     list_with_summed_up_tuples = list(map(sum, some_list))
     
@@ -36,7 +37,10 @@ def main():
           sum_tuples_in_list(zip_some_lists(list_1, list_2, list_3)))
     print("5. После получения списка п.4 оставить в нем только нечетние значения: ",
           filter_to_odd_list(sum_tuples_in_list(zip_some_lists(list_1, list_2, list_3))))
-   
+
+
+
 
 if __name__ == '__main__':
     main()
+    
