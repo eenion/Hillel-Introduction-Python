@@ -23,7 +23,7 @@ class JsonSorter():
         for person in employee:
             first_name = person.get('firstName')
             last_name = person.get('lastName')
-            fio = f"{first_name} + {' '} + {last_name}"
+            fio = f"{first_name} {last_name}"
             ints = []
             strings = []
             floats = []
