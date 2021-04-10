@@ -25,7 +25,7 @@ class JsonSorter():
         for person in employee:
             first_name = person.get('firstName')
             last_name = person.get('lastName')
-            fio = f"{first_name} + {' '} + {last_name}"
+            fio = f"{first_name} {last_name}"
             ints = []
             strings = []
             floats = []
@@ -54,6 +54,7 @@ class JsonSorter():
         
     def save_sorted_dict(self, dicc_d, save_to_file = 'HW_result.json'):
         self.dicc_d = dicc_d
+        self.save_to_file = save_to_file
         with open(save_to_file, 'w') as file:
             json.dump(dicc_d, file)
         return print(f'Файл {save_to_file} успешно сохранен.')
